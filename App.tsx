@@ -28,22 +28,22 @@ interface Platform {
   isPublished?: boolean; // 是否已发布
 }
 
-// 扩展的热门推荐数据池 (12个)，包含作者信息
+// 扩展的热门推荐数据池 (12个)，包含作者信息、简介和价格
 const ALL_RECOMMENDATIONS = [
-  { id: 'h1', name: '电商金牌客服', tags: ['热门', '营销'], color: 'bg-purple-500', imageUrl: 'https://picsum.photos/seed/hot1/540/960', author: 'Sarah Li' },
-  { id: 'h2', name: '日报周报生成器', tags: ['效率', '办公'], color: 'bg-blue-500', imageUrl: 'https://picsum.photos/seed/hot2/540/960', author: 'WorkSmart' },
-  { id: 'h3', name: '私域流量管家', tags: ['增长', '社交'], color: 'bg-pink-500', imageUrl: 'https://picsum.photos/seed/hot3/540/960', author: 'GrowthHacker' },
-  { id: 'h4', name: '代码审计专家', tags: ['开发', '安全'], color: 'bg-indigo-500', imageUrl: 'https://picsum.photos/seed/hot4/540/960', author: 'DevSecOps' },
+  { id: 'h1', name: '电商金牌客服', tags: ['热门', '营销'], color: 'bg-purple-500', imageUrl: 'https://picsum.photos/seed/hot1/540/960', author: 'Sarah Li', description: '智能客服助手，24小时在线，自动回复客户咨询，提升转化率', price: '¥29/月' },
+  { id: 'h2', name: '日报周报生成器', tags: ['效率', '办公'], color: 'bg-blue-500', imageUrl: 'https://picsum.photos/seed/hot2/540/960', author: 'WorkSmart', description: '自动整理工作内容，生成专业日报周报，节省90%时间', price: '¥19/月' },
+  { id: 'h3', name: '私域流量管家', tags: ['增长', '社交'], color: 'bg-pink-500', imageUrl: 'https://picsum.photos/seed/hot3/540/960', author: 'GrowthHacker', description: '智能管理私域用户，自动跟进转化，提升复购率', price: '¥39/月' },
+  { id: 'h4', name: '代码审计专家', tags: ['开发', '安全'], color: 'bg-indigo-500', imageUrl: 'https://picsum.photos/seed/hot4/540/960', author: 'DevSecOps', description: '自动检测代码漏洞，提供安全建议，保障项目安全', price: '¥49/月' },
   
-  { id: 'h5', name: '小红书文案助手', tags: ['创作', '社媒'], color: 'bg-red-500', imageUrl: 'https://picsum.photos/seed/hot5/540/960', author: 'Jenny Chen' },
-  { id: 'h6', name: '英语口语教练', tags: ['教育', '语言'], color: 'bg-green-500', imageUrl: 'https://picsum.photos/seed/hot6/540/960', author: 'EduTech Pro' },
-  { id: 'h7', name: 'Python脚本生成', tags: ['编程', '工具'], color: 'bg-yellow-500', imageUrl: 'https://picsum.photos/seed/hot7/540/960', author: 'CodeMaster' },
-  { id: 'h8', name: '法律咨询顾问', tags: ['专业', '咨询'], color: 'bg-slate-500', imageUrl: 'https://picsum.photos/seed/hot8/540/960', author: 'LawAI' },
+  { id: 'h5', name: '小红书文案助手', tags: ['创作', '社媒'], color: 'bg-red-500', imageUrl: 'https://picsum.photos/seed/hot5/540/960', author: 'Jenny Chen', description: '一键生成爆款文案，适配小红书风格，提升互动率', price: '¥25/月' },
+  { id: 'h6', name: '英语口语教练', tags: ['教育', '语言'], color: 'bg-green-500', imageUrl: 'https://picsum.photos/seed/hot6/540/960', author: 'EduTech Pro', description: 'AI口语陪练，纠正发音，提升英语表达能力', price: '¥35/月' },
+  { id: 'h7', name: 'Python脚本生成', tags: ['编程', '工具'], color: 'bg-yellow-500', imageUrl: 'https://picsum.photos/seed/hot7/540/960', author: 'CodeMaster', description: '根据需求自动生成Python代码，提高开发效率', price: '¥45/月' },
+  { id: 'h8', name: '法律咨询顾问', tags: ['专业', '咨询'], color: 'bg-slate-500', imageUrl: 'https://picsum.photos/seed/hot8/540/960', author: 'LawAI', description: '提供法律咨询建议，合同审查，风险提示', price: '¥59/月' },
   
-  { id: 'h9', name: '健身计划制定', tags: ['健康', '生活'], color: 'bg-teal-500', imageUrl: 'https://picsum.photos/seed/hot9/540/960', author: 'FitLife' },
-  { id: 'h10', name: 'PPT大纲生成器', tags: ['办公', '效率'], color: 'bg-orange-500', imageUrl: 'https://picsum.photos/seed/hot10/540/960', author: 'OfficeWiz' },
-  { id: 'h11', name: '塔罗牌占卜师', tags: ['娱乐', '趣味'], color: 'bg-purple-800', imageUrl: 'https://picsum.photos/seed/hot11/540/960', author: 'MysticAI' },
-  { id: 'h12', name: '面试模拟官', tags: ['求职', '模拟'], color: 'bg-blue-700', imageUrl: 'https://picsum.photos/seed/hot12/540/960', author: 'HR Assistant' },
+  { id: 'h9', name: '健身计划制定', tags: ['健康', '生活'], color: 'bg-teal-500', imageUrl: 'https://picsum.photos/seed/hot9/540/960', author: 'FitLife', description: '个性化健身计划，科学训练方案，追踪运动数据', price: '¥29/月' },
+  { id: 'h10', name: 'PPT大纲生成器', tags: ['办公', '效率'], color: 'bg-orange-500', imageUrl: 'https://picsum.photos/seed/hot10/540/960', author: 'OfficeWiz', description: '快速生成PPT大纲，结构化内容，提升演示效果', price: '¥22/月' },
+  { id: 'h11', name: '塔罗牌占卜师', tags: ['娱乐', '趣味'], color: 'bg-purple-800', imageUrl: 'https://picsum.photos/seed/hot11/540/960', author: 'MysticAI', description: 'AI塔罗占卜，提供趣味解读，放松心情', price: '¥15/月' },
+  { id: 'h12', name: '面试模拟官', tags: ['求职', '模拟'], color: 'bg-blue-700', imageUrl: 'https://picsum.photos/seed/hot12/540/960', author: 'HR Assistant', description: '模拟真实面试场景，提供反馈建议，提升面试成功率', price: '¥32/月' },
 ];
 
 // Toast 组件
@@ -772,14 +772,23 @@ const App: React.FC = () => {
                       
                       <div className="flex gap-3 overflow-x-auto pb-4 -mx-1 px-1 snap-x snap-mandatory no-scrollbar">
                          {visibleRecs.map((rec) => (
-                           <div key={rec.id} onClick={() => onStartCreating({ name: rec.name, description: '基于热门推荐创建', category: '效率办公', imageUrl: rec.imageUrl, id: rec.id } as AITemplate)} className="min-w-[42%] aspect-[9/16] relative rounded-[24px] overflow-hidden snap-start shrink-0 shadow-md active:scale-95 transition-all">
-                              <img src={rec.imageUrl} className="absolute inset-0 w-full h-full object-cover" alt="" />
-                              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
-                              <div className="absolute top-2 right-2">
+                           <div key={rec.id} onClick={() => onStartCreating({ name: rec.name, description: rec.description || '基于热门推荐创建', category: '效率办公', imageUrl: rec.imageUrl, id: rec.id } as AITemplate)} className="min-w-[42%] aspect-[9/16] relative rounded-[24px] overflow-hidden snap-start shrink-0 shadow-md active:scale-95 transition-all group">
+                              <img src={rec.imageUrl} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="" />
+                              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/60 to-transparent" />
+                              <div className="absolute top-2 right-2 z-10">
                                 <span className="bg-white/20 backdrop-blur-md text-[9px] font-bold text-white px-2 py-0.5 rounded-full border border-white/20">Hot</span>
                               </div>
-                              <div className="absolute bottom-3 left-3 right-3">
-                                <h4 className="text-white font-bold text-[13px] leading-tight">{rec.name}</h4>
+                              <div className="absolute bottom-0 left-0 right-0 p-3 z-10">
+                                <h4 className="text-white font-bold text-[14px] leading-tight mb-1.5">{rec.name}</h4>
+                                {rec.description && (
+                                  <p className="text-white/90 text-[10px] leading-relaxed mb-2 line-clamp-2">{rec.description}</p>
+                                )}
+                                {rec.price && (
+                                  <div className="flex items-center justify-between">
+                                    <span className="text-white font-black text-[15px]">{rec.price}</span>
+                                    <span className="text-white/70 text-[9px]">立即使用</span>
+                                  </div>
+                                )}
                               </div>
                            </div>
                          ))}
