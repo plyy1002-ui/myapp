@@ -3,9 +3,9 @@ import React, { useState, useRef } from 'react';
 import Layout from './components/Layout';
 import { AITemplate } from './types';
 import { 
-  Plus, Zap, X, Settings, Activity, Database, Layers, LayoutGrid, List, Search, 
-  ChevronRight, Shield, Bell, HelpCircle, LogOut, CheckCircle2, Loader2, SlidersHorizontal, Image as ImageIcon,
-  Flame, Sparkles, AlertTriangle, Copy, Clock, Calendar, UserCircle2, Eye, Crown, MoreHorizontal, Trash2, Edit2
+  Plus, X, Settings, Activity, Database, Layers, LayoutGrid, List, Search, 
+  ChevronRight, Shield, Bell, HelpCircle, LogOut, CheckCircle2, Loader2, SlidersHorizontal,
+  Flame, Sparkles, Copy, Clock, Crown, MoreHorizontal, Trash2, Edit2
 } from 'lucide-react';
 
 interface Platform {
