@@ -1,6 +1,9 @@
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
@@ -18,7 +21,15 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         },
-        extensions: ['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json']
+        extensions: ['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json'],
+        preserveSymlinks: false
+      },
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks: undefined
+          }
+        }
       }
     };
 });

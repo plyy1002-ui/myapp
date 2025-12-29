@@ -1,7 +1,7 @@
 
 import React, { useState, useRef } from 'react';
-import Layout from '@/components/Layout';
-import { AITemplate } from '@/types';
+import Layout from './components/Layout';
+import { AITemplate } from './types';
 import { 
   Plus, Zap, X, Settings, Activity, Database, Layers, LayoutGrid, List, Search, 
   ChevronRight, Shield, Bell, HelpCircle, LogOut, CheckCircle2, Loader2, SlidersHorizontal, Image as ImageIcon,
