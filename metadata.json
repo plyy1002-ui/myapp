@@ -1,0 +1,8 @@
+{
+  "name": "Agentsyun智能OPC工作台",
+  "description": "一个整洁、现代的 AI 工作台界面，具有由 Gemini 提供支持的智能搜索驱动创建体验和智能模板推荐。",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
